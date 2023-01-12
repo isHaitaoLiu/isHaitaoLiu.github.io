@@ -13,13 +13,22 @@ export default {
           text: '后端开发',
           children: [
             {
-              text: 'SubGroup',
-              children: ['/back-end/Spring.md', '/back-end/SpringBoot.md', '/back-end/SpringCloud.md'],
-              activeMatch: '/',
+              text: 'Spring',
+              link: '/back-end/Spring.md',
+              activeMatch: '^/back-end/',
+            },
+            {
+              text: 'SpringBoot',
+              link: '/back-end/SpringBoot.md',
+              activeMatch: '^/back-end/',
+            },
+            {
+              text: 'SpringCloud',
+              link: '/back-end/SpringCloud.md',
+              activeMatch: '^/back-end/',   // 控制元素何时被激活
             },
           ],
         },
-        // 控制元素何时被激活
         {
           text: '中间件',
           children: [
@@ -27,21 +36,42 @@ export default {
               text: 'Zookeeper',
               link: '/middleware/Zookeeper.md',
               // 该元素将一直处于激活状态
-              activeMatch: '/',
+              activeMatch: '^/middleware/',
             },
             {
               text: 'Redis',
               link: '/middleware/Redis.md',
-              // 该元素在当前路由路径是 /foo/ 开头时激活
+              // 该元素在当前路由路径是 /middleware/ 开头时激活
               // 支持正则表达式
               activeMatch: '^/middleware/',
             },
             {
               text: 'Kafka',
               link: '/middleware/Kafka.md',
-              // 该元素在当前路由路径是 /foo/ 开头时激活
-              // 支持正则表达式
               activeMatch: '^/middleware/',
+            },
+          ],
+        },
+        {
+          text: '工具｜部署',
+          children: [
+            {
+              text: 'Shell',
+              link: '/deploy/Shell.md',
+              // 该元素将一直处于激活状态
+              activeMatch: '^/deploy/',
+            },
+            {
+              text: 'Kubernetes',
+              link: '/deploy/Kubernetes.md',
+              // 该元素在当前路由路径是 /middleware/ 开头时激活
+              // 支持正则表达式
+              activeMatch: '^/deploy/',
+            },
+            {
+              text: 'Git',
+              link: '/deploy/Git.md',
+              activeMatch: '^/deploy/',
             },
           ],
         },
